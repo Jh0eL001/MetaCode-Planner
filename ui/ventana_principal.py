@@ -7,26 +7,18 @@ class VentanaPrincipal(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Planificador Deportivo")
-        self.geometry("800x600")
+        self.title("MetaCode Planner - Planificador Deportivo (Club de Fútbol)")
+        self.geometry("900x600")
 
-        # Marco principal
-        self.marco = ctk.CTkFrame(self)
-        self.marco.pack(pady=20, padx=20, fill="both", expand=True)
+        marco = ctk.CTkFrame(self)
+        marco.pack(pady=20, padx=20, fill="both", expand=True)
 
-        # Título
-        self.etiqueta = ctk.CTkLabel(self.marco, text="Planificador de Actividades", font=("Arial", 20))
-        self.etiqueta.pack(pady=10)
+        titulo = ctk.CTkLabel(marco, text="Planificador de Actividades del Club", font=("Arial", 22))
+        titulo.pack(pady=10)
 
-        # Botones principales
-        self.btn_actividades = ctk.CTkButton(self.marco, text="Ver Actividades", command=self.abrir_actividades)
-        self.btn_actividades.pack(pady=5)
-
-        self.btn_agregar = ctk.CTkButton(self.marco, text="Agregar Actividad", command=self.abrir_agregar)
-        self.btn_agregar.pack(pady=5)
-
-        self.btn_alertas = ctk.CTkButton(self.marco, text="Ver Alertas", command=self.abrir_alertas)
-        self.btn_alertas.pack(pady=5)
+        ctk.CTkButton(marco, text="Ver Actividades", command=self.abrir_actividades).pack(pady=6)
+        ctk.CTkButton(marco, text="Agregar Actividad", command=self.abrir_agregar).pack(pady=6)
+        ctk.CTkButton(marco, text="Ver Alertas (24h)", command=self.abrir_alertas).pack(pady=6)
 
     def abrir_actividades(self):
         VistaActividades(self)
@@ -36,3 +28,4 @@ class VentanaPrincipal(ctk.CTk):
 
     def abrir_alertas(self):
         VistaAlertas(self)
+

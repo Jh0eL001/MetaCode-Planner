@@ -15,7 +15,10 @@ MetaCode-Planner/
 │   ├── vista_actividades.py     # Pantalla para ver actividades
 │   ├── agregar_actividad.py     # Pantalla para agregar actividades
 │   └── vista_alertas.py         # Pantalla para alertas
-│
+|
+├── datos
+├── actividades.csv              # Archivo que guarda los datos
+|
 ├── modelos/                     # Lógica de datos y clases
 │   ├── __init__.py
 │   ├── actividad.py             # Clase Actividad
